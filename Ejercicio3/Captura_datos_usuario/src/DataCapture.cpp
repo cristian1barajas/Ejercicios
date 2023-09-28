@@ -17,7 +17,12 @@ int DataCapture::captureInteger(String message) {
 }
 
 String DataCapture::captureString(String message) {
-
+    Serial.print(message);
+    while (!Serial.available()) {}
+    String inputString = Serial.readString();
+    Serial.print(" " + inputString);
+    Serial.println();
+    return inputString;
 }
 
 bool DataCapture::isInteger(String data) {

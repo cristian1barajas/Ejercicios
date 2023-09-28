@@ -9,6 +9,9 @@ void setup() {
   int OtherNumber = DataCapture::captureInteger("Ingrese segundo número:");
 
   Serial.println("Resultado de la Suma: " + String(number + OtherNumber));
+
+  String message = DataCapture::captureString("Ingrese una palabra:");
+  Serial.println("Mensaje: " + message);
 }
 
 void loop() {

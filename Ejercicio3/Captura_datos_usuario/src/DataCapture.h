@@ -1,10 +1,8 @@
 #include <Arduino.h>
 
-class DataCapture
+namespace DataCapture
 {
-private:
-    static bool isInteger(String data);
-public:
-    static int captureInteger(String message);
-    static String captureString(String message);
-};
+    int captureInteger(String message);
+    String captureString(String message);
+    float captureFloat(String message);
+}
